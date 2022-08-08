@@ -13,7 +13,7 @@ url = url.replace('https://youtu.be/', '');
 url = url.split('&')[0];
 
 console.log(`Downloading video...`);
-exec(`yt-dlp -o"output.m4a" -f140 ${url}`, (err, stdout, stderr) => {
+exec(`yt-dlp -o"output.m4a" -f140 "https://youtu.be/${url}"`, (err, stdout, stderr) => {
     if (err) {
         console.log(err);
         return;
